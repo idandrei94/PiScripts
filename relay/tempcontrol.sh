@@ -13,4 +13,5 @@ if [ $temp -lt 30 ]
 then
 	pump_off
 fi
+sleep 10
 done
