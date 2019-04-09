@@ -1,0 +1,4 @@
+Add @reboot mount -t tmpfs -o size=5M none /mnt/ramdisk to crontab
+Copy all scripts to /usr/bin, omitting the .sh extension
+Add /usr/bin/tempcontrol to crontab @reboot
+Make sure de pump and led scripts use the correct pin numbers
