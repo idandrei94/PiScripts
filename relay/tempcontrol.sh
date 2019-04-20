@@ -9,7 +9,7 @@ then
 	pump_on
 	if [ "$(cat /var/log/pump | tail -n 1 | awk '{print $8}')" != "on" ]; 
 	then 
-	    echo $(date) Pump on >> /var/log/pump 
+	    echo $(date) Pump manually on >> /var/log/pump 
     fi
 	sleep 10
 else
