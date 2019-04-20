@@ -13,12 +13,6 @@ then
     fi
 	sleep 10
 else
-	if [ "$(cat /var/log/pump | tail -n 1 | awk '{print $8}')" != "off" ]; 
-	then 
-	    echo $(date) Pump off >> /var/log/pump 
-    fi
-fi
-
 if [ $temp -gt 42 ]
 then
 	pump_on	
@@ -34,8 +28,9 @@ then
 	pump_off
 	if [ "$(cat /var/log/pump | tail -n 1 | awk '{print $8}')" != "off" ]; 
 	then 
-	    echo $(date) Pump on >> /var/log/pump 
+	    echo $(date) Pump off >> /var/log/pump 
     fi
+fi
 fi
 sleep 10
 done
